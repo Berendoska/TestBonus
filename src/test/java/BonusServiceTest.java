@@ -65,6 +65,54 @@ public class BonusServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void UnregisteredBorderBefore() {
+        BonusService service = new BonusService();
+
+        long amount = 49_999;
+        boolean registered = false;
+        long expected = 499;
+        long actual = service.calculate(amount, registered);
+
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void UnregisteredBorder() {
+        BonusService service = new BonusService();
+
+        long amount = 50_000;
+        boolean registered = false;
+        long expected = 500;
+        long actual = service.calculate(amount, registered);
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void UnregisteredBorderAfter() {
+        BonusService service = new BonusService();
+
+        long amount = 50_001;
+        boolean registered = false;
+        long expected = 500;
+        long actual = service.calculate(amount, registered);
+
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void UnregisteredAfter() {
+        BonusService service = new BonusService();
+
+        long amount = 60_000;
+        boolean registered = false;
+        long expected = 500;
+        long actual = service.calculate(amount, registered);
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+
+
 
     @Test
     public void Border() {
