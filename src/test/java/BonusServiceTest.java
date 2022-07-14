@@ -65,6 +65,7 @@ public class BonusServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void UnregisteredBorderBefore() {
         BonusService service = new BonusService();
@@ -76,6 +77,7 @@ public class BonusServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void UnregisteredBorder() {
         BonusService service = new BonusService();
@@ -99,6 +101,7 @@ public class BonusServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void UnregisteredAfter() {
         BonusService service = new BonusService();
@@ -110,8 +113,6 @@ public class BonusServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
-
-
 
 
     @Test
